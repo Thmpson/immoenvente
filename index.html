@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Immo en vente : l'agence immobilière 50/50 transparente. Vendez plus net grâce à une commission partagée, une baisse de prix claire et une IA qui gère tout. Achetez moins cher sans visites inutiles.">
+    <meta name="keywords" content="agence immobilière, commission 50/50, vente immobilier sans frais cachés, IA immobilier, photos pro immobilier, visites payantes dégressives, immoenvente, achat immobilier moins cher">
+    <meta name="robots" content="index, follow">
+    <title>Immo en vente • Agence immobilière 50/50 transparente avec IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --tw-color-primary: #0066FF;
+        }
+        
+        * {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(92deg, #f8fafc 0%, #e0f0ff 100%);
+        }
+        
+        .apple-card {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05),
+                        0 4px 6px -4px rgb(0 0 0 / 0.05);
+        }
+        
+        .section-header {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .natural-text {
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-white text-slate-900">
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white border-b border-slate-100">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold">I</div>
+                    <span class="font-semibold text-3xl tracking-tight section-header">Immo en vente</span>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#marche" class="hover:text-blue-600">Pourquoi changer ?</a>
+                    <a href="#modele" class="hover:text-blue-600">Notre modèle</a>
+                    <a href="#simulateur" class="hover:text-blue-600">Simulateur d’économies</a>
+                    <a href="#pourquoi" class="hover:text-blue-600">Qui gagne quoi ?</a>
+                    <a href="#faq" class="hover:text-blue-600">Questions fréquentes</a>
+                </div>
+                
+                <div class="flex items-center gap-x-4">
+                    <a href="#simulateur" class="px-6 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-3xl flex items-center gap-x-2">
+                        <i class="fa-solid fa-calculator"></i>
+                        Calculer mes économies
+                    </a>
+                    <button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="px-6 py-2.5 text-sm font-semibold border border-slate-300 hover:border-slate-400 rounded-3xl">
+                        Nous contacter
+                    </button>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden border-t bg-white px-6 py-4">
+            <div class="flex flex-col gap-y-4 text-sm font-medium">
+                <a href="#marche" class="py-2">Pourquoi changer ?</a>
+                <a href="#modele" class="py-2">Notre modèle</a>
+                <a href="#simulateur" class="py-2">Simulateur d’économies</a>
+                <a href="#pourquoi" class="py-2">Qui gagne quoi ?</a>
+                <a href="#faq" class="py-2">Questions fréquentes</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="hero" class="hero-bg pt-16 pb-20">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7">
+                    <div class="inline-flex items-center gap-x-2 bg-white rounded-3xl px-4 py-1 text-sm font-medium shadow-sm mb-6">
+                        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        Pilote ouvert • Paris & Île-de-France • 2026
+                    </div>
+                    
+                    <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter leading-none section-header mb-6">
+                        L’agence immobilière qui rend la vente juste.
+                    </h1>
+                    
+                    <p class="text-2xl text-slate-600 max-w-xl mb-8 natural-text">
+                        Vendez votre bien <strong>plus rapidement </strong> à un meilleur prix.<br>
+                        Achetez un bien <strong>moins cher</strong> sans frais cachés.
+                    </p>
+                    
+                    <p class="text-lg text-slate-600 max-w-md mb-10 natural-text">
+                        Chez Immo en vente, on partage tout à 50/50, on baisse le prix de mise en vente de 2,5 % minimum, et une IA s’occupe de toute la paperasse. 
+                        Simple, transparent et honnête.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#simulateur" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-3xl flex items-center gap-x-3 shadow-xl shadow-blue-200">
+                            <i class="fa-solid fa-calculator"></i>
+                            Voir combien je gagne vraiment
+                        </a>
+                        <a href="#modele" class="px-8 py-4 border-2 border-slate-800 hover:bg-slate-900 hover:text-white text-lg font-semibold rounded-3xl flex items-center gap-x-3">
+                            Découvrir notre modèle
+                        </a>
+                    </div>
+                    
+                    <div class="mt-12 flex items-center gap-x-8 text-sm">
+                        <div>✅ Satisfait ou remboursé si non vendu en 150 jours</div>
+                        <div>✅ 100 % transparent • Pas de frais cachés</div>
+                        <div class="text-slate-500">immoenvente.com</div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-5 relative">
+                    <div class="bg-white apple-card rounded-3xl p-8 shadow-2xl max-w-md mx-auto">
+                        <p class="text-slate-500 mb-1">Exemple réel sur un bien à 500 000 €</p>
+                        <div class="flex justify-between items-baseline mb-8">
+                            <div>
+                                <p class="text-5xl font-semibold">487 500 €</p>
+                                <p class="text-emerald-600">−2,5 % de baisse volontaire</p>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-emerald-600 text-4xl font-semibold">+22 063 €</div>
+                                <p class="text-xs text-slate-500">dans la poche du vendeur<br>par rapport à 5 % de commission classique</p>
+                            </div>
+                        </div>
+                        <button onclick="document.getElementById('simulateur').scrollIntoView({ behavior: 'smooth' })" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-3xl text-lg">
+                            Tester avec mon prix
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MARCHÉ -->
+    <section id="marche" class="py-20 bg-white border-t">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="max-w-2xl mx-auto text-center mb-16">
+                <span class="px-4 py-1 text-xs font-medium bg-slate-100 rounded-3xl">Le constat du marché</span>
+                <h2 class="text-5xl font-semibold section-header tracking-tighter mt-4 mb-4">Pourquoi la plupart des ventes immobilières coûtent trop cher</h2>
+                <p class="text-xl text-slate-600 natural-text">Les commissions traditionnelles tournent autour de 5 %, les visites sont souvent inutiles et personne ne gagne vraiment.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-slate-50">
+                    <h3 class="font-semibold text-2xl mb-3">Pour le vendeur</h3>
+                    <p class="text-slate-600 natural-text">Vous payez entre 4,87 % et 7 % de commission (Galian 2025) pour des annonces basiques et des visites mal ciblées.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-50">
+                    <h3 class="font-semibold text-2xl mb-3">Pour l’acquéreur</h3>
+                    <p class="text-slate-600 natural-text">Vous payez indirectement ces frais via un prix gonflé + vous faites en moyenne 6 visites avant d’acheter.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-50">
+                    <h3 class="font-semibold text-2xl mb-3">Pour tout le monde</h3>
+                    <p class="text-slate-600 natural-text">Le système n’a presque pas changé depuis 30 ans. On a décidé de le réparer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODÈLE -->
+    <section id="modele" class="py-20 bg-slate-50">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="max-w-2xl mx-auto text-center mb-12">
+                <h2 class="text-5xl font-semibold section-header tracking-tighter">Comment fonctionne Immo en vente ?</h2>
+                <p class="mt-4 text-xl text-slate-600 natural-text">Un modèle simple, juste et transparent.</p>
+            </div>
+            
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-8 bg-white p-8 rounded-3xl apple-card">
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-semibold mb-3">1. Photos & vidéos professionnelles</h3>
+                        <p class="text-slate-600 natural-text">Payées par le vendeur (forfait 500 €). Qualité stricte + projections de travaux par IA.</p>
+                    </div>
+                    <div class="text-emerald-600 font-medium text-sm self-start px-5 py-2 bg-emerald-50 rounded-3xl">Satisfait ou remboursé si le bien n’est pas vendu en 150 jours</div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-8 bg-white p-8 rounded-3xl apple-card">
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-semibold mb-3">2. Visites physiques</h3>
+                        <p class="text-slate-600 natural-text">À la charge de l’acquéreur (tarif dégressif et clair) :<br>
+                        • 1ère visite : 25 € (−50 %)<br>
+                        • Visites 2 à 10 : 50 €<br>
+                        • Visites 11 à 20 : 37,50 €<br>
+                        • Dès la 21e : 25 €</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-8 bg-white p-8 rounded-3xl apple-card">
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-semibold mb-3">3. Commission transparente</h3>
+                        <p class="text-slate-600 natural-text">1 % au total, partagé 50/50 entre vendeur et acquéreur (0,5 % chacun).</p>
+                    </div>
+                    <div class="self-start px-6 py-3 bg-amber-50 text-amber-700 rounded-3xl font-medium">Le vendeur baisse le prix de mise en vente de 2,5 % minimum</div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-8 bg-white p-8 rounded-3xl apple-card">
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-semibold mb-3">4. IA qui gère tout</h3>
+                        <p class="text-slate-600 natural-text">Diffusion, matching des acquéreurs, papiers administratifs… Vous n’avez besoin que d’un compte Google et d’une carte bancaire.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMULATEUR -->
+    <section id="simulateur" class="py-20 bg-white border-t border-b">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="max-w-2xl mx-auto text-center mb-12">
+                <h2 class="text-5xl font-semibold section-header tracking-tighter">Combien allez-vous vraiment gagner ?</h2>
+                <p class="mt-4 text-xl text-slate-600 natural-text">Simulateur en direct – 100 % transparent et basé sur des chiffres réels</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-white apple-card rounded-3xl p-8 lg:p-12 border">
+                <div class="mb-8">
+                    <label class="block text-sm font-medium text-slate-500 mb-2">Prix du bien sur le marché actuel</label>
+                    <div class="flex items-center gap-x-4">
+                        <input id="price-input" type="text" value="500000" class="flex-1 text-6xl font-semibold outline-none bg-transparent">
+                        <span class="text-4xl text-slate-400">€</span>
+                    </div>
+                    <input type="range" id="price-slider" min="100000" max="2000000" step="10000" value="500000" class="w-full mt-4 accent-blue-600">
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 rounded-3xl p-6">
+                        <h4 class="font-semibold text-xl mb-4">Le vendeur</h4>
+                        <div class="space-y-4 text-sm">
+                            <div class="flex justify-between"><span class="text-slate-500">Commission classique (5 %)</span><span id="traditional-seller" class="font-medium">25 000 €</span></div>
+                            <div class="flex justify-between"><span class="text-slate-500">Chez Immo en vente (photos 500 € + 0,5 %)</span><span id="equo-seller" class="font-medium">2 937 €</span></div>
+                            <div class="flex justify-between border-t pt-4 font-medium">Économie nette : <span id="seller-net" class="text-emerald-600 text-2xl">+22 063 €</span></div>
+                            <p class="text-xs text-slate-500">Ce chiffre est calculé automatiquement en fonction du prix que vous entrez.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-50 rounded-3xl p-6">
+                        <h4 class="font-semibold text-xl mb-4">L’acquéreur</h4>
+                        <div class="space-y-4 text-sm">
+                            <div class="flex justify-between"><span class="text-slate-500">Prix d’achat avec nous</span><span id="equo-price" class="font-medium">487 500 €</span></div>
+                            <div class="flex justify-between"><span class="text-slate-500">Commission 0,5 % + visites (6 en moyenne)</span><span id="buyer-fees" class="font-medium">2 712 €</span></div>
+                            <div class="flex justify-between border-t pt-4 font-medium">Économie nette : <span id="buyer-net" class="text-emerald-600 text-2xl">−12 000 €</span></div>
+                            <p class="text-xs text-slate-500">Calcul automatique selon le prix du bien.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POURQUOI -->
+    <section id="pourquoi" class="py-20 bg-slate-50">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <h2 class="text-center text-5xl font-semibold section-header tracking-tighter mb-16">Qui gagne quoi avec Immo en vente ?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="apple-card bg-white p-8 rounded-3xl">
+                    <h3 class="font-semibold text-2xl mb-3">Vendeur</h3>
+                    <p class="text-slate-600 natural-text">Vous gardez beaucoup plus d’argent dans votre poche (exemple : +22 000 € sur un bien à 500 000 €) et vous vendez plus vite grâce à des annonces de qualité.</p>
+                </div>
+                <div class="apple-card bg-white p-8 rounded-3xl">
+                    <h3 class="font-semibold text-2xl mb-3">Acquéreur</h3>
+                    <p class="text-slate-600 natural-text">Vous achetez un bien déjà 2,5 % moins cher, vous payez moitié moins de commission et les visites sont justes et dégressives.</p>
+                </div>
+                <div class="apple-card bg-white p-8 rounded-3xl">
+                    <h3 class="font-semibold text-2xl mb-3">Immo en vente</h3>
+                    <p class="text-slate-600 natural-text">Nous gagnons grâce à notre modèle digital et aux 10 % sur les artisans certifiés. Pas de locaux, pas de coûts inutiles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 max-w-3xl mx-auto">
+            <h2 class="text-4xl font-semibold text-center mb-12">Les questions que tout le monde nous pose</h2>
+            
+            <details class="group bg-slate-50 rounded-3xl p-6 mb-4">
+                <summary class="flex justify-between items-center cursor-pointer font-medium">Les vendeurs acceptent-ils vraiment de baisser leur prix de 2,5 % ?</summary>
+                <p class="mt-6 text-slate-600 natural-text">Oui. Ils gagnent encore plus de 22 000 € net par rapport à une agence classique sur un bien à 500 000 €. La baisse est largement compensée par la rapidité de vente.</p>
+            </details>
+            
+            <details class="group bg-slate-50 rounded-3xl p-6 mb-4">
+                <summary class="flex justify-between items-center cursor-pointer font-medium">Pourquoi l’acquéreur paie les visites ?</summary>
+                <p class="mt-6 text-slate-600 natural-text">Parce que c’est transparent et dégressif. Pour 6 visites (la moyenne en France), cela coûte seulement 275 €. En échange, vous achetez un bien déjà moins cher et vous payez moitié moins de commission.</p>
+            </details>
+            
+            <details class="group bg-slate-50 rounded-3xl p-6">
+                <summary class="flex justify-between items-center cursor-pointer font-medium">Est-ce vraiment légal de faire payer les visites ?</summary>
+                <p class="mt-6 text-slate-600 natural-text">Oui. C’est un service optionnel, clairement séparé de la commission. Tout est validé par un cabinet d’avocats spécialisé.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- CTA INVEST -->
+    <section class="py-20 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 text-center">
+            <h2 class="text-5xl font-semibold section-header tracking-tighter mb-8">Vous êtes investisseur, banquier ou futur partenaire ?</h2>
+            <p class="max-w-2xl mx-auto text-xl mb-12 natural-text">Un modèle rentable, scalable et résilient. Marge élevée, revenus récurrents et alignement total avec les clients.</p>
+            <button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="px-10 py-5 bg-white text-slate-900 font-semibold text-lg rounded-3xl">Parlons de votre projet</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 text-center">
+            <div class="flex justify-center mb-8">
+                <div class="flex items-center gap-x-3 text-3xl">
+                    <div class="w-9 h-9 bg-white text-blue-600 rounded-2xl flex items-center justify-center font-bold">I</div>
+                    <span class="font-semibold tracking-tighter">Immo en vente</span>
+                </div>
+            </div>
+            <p class="max-w-md mx-auto text-slate-400 mb-10">immoenvente.com • immoenvente.fr<br>Une agence immobilière honnête, transparente et technologique.</p>
+            <p class="text-xs text-slate-500">© 2026 Immo en vente – Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="contact-modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[9999]">
+        <div class="bg-white rounded-3xl max-w-lg w-full mx-4 p-8">
+            <div class="flex justify-between mb-6">
+                <h3 class="text-2xl font-semibold">Contactez Immo en vente</h3>
+                <button onclick="document.getElementById('contact-modal').classList.add('hidden')" class="text-3xl">×</button>
+            </div>
+            <input type="text" placeholder="Votre nom" class="w-full px-6 py-4 border rounded-3xl mb-4 focus:outline-none focus:border-blue-600">
+            <input type="email" placeholder="Votre email" class="w-full px-6 py-4 border rounded-3xl mb-4 focus:outline-none focus:border-blue-600">
+            <textarea placeholder="Votre message (pilote, questions, investissement...)" rows="4" class="w-full px-6 py-4 border rounded-3xl mb-6 focus:outline-none focus:border-blue-600"></textarea>
+            <button onclick="alert('Merci ! Nous vous recontactons très vite.'); document.getElementById('contact-modal').classList.add('hidden')" class="w-full py-4 bg-blue-600 text-white font-semibold rounded-3xl">Envoyer</button>
+        </div>
+    </div>
+
+    <script>
+        function updateSimulator() {
+            const priceInput = document.getElementById('price-input');
+            const slider = document.getElementById('price-slider');
+            let price = parseFloat(priceInput.value.replace(/\s/g, '')) || 500000;
+            
+            if (isNaN(price)) price = 500000;
+            slider.value = Math.max(100000, Math.min(2000000, price));
+            
+            const marketPrice = price;
+            const equoPrice = Math.round(marketPrice * 0.975);
+            const traditionalCommission = Math.round(marketPrice * 0.05);
+            
+            const equoPhotos = 500;
+            const equoCommissionSeller = Math.round(equoPrice * 0.005);
+            const equoSellerTotal = equoPhotos + equoCommissionSeller;
+            const sellerGain = traditionalCommission - equoSellerTotal;
+            
+            const buyerVisits = 275;
+            const equoCommissionBuyer = Math.round(equoPrice * 0.005);
+            const buyerTotalFees = buyerVisits + equoCommissionBuyer;
+            const buyerGain = Math.round(marketPrice - (equoPrice + buyerTotalFees));
+            
+            document.getElementById('traditional-seller').textContent = traditionalCommission.toLocaleString('fr-FR') + ' €';
+            document.getElementById('equo-seller').textContent = equoSellerTotal.toLocaleString('fr-FR') + ' €';
+            document.getElementById('seller-net').textContent = '+' + sellerGain.toLocaleString('fr-FR') + ' €';
+            
+            document.getElementById('equo-price').textContent = equoPrice.toLocaleString('fr-FR') + ' €';
+            document.getElementById('buyer-fees').textContent = buyerTotalFees.toLocaleString('fr-FR') + ' €';
+            document.getElementById('buyer-net').textContent = '−' + buyerGain.toLocaleString('fr-FR') + ' €';
+            
+            priceInput.value = price.toLocaleString('fr-FR');
+        }
+        
+        function setupSimulator() {
+            const priceInput = document.getElementById('price-input');
+            const slider = document.getElementById('price-slider');
+            
+            priceInput.addEventListener('input', () => {
+                let val = priceInput.value.replace(/[^0-9]/g, '');
+                priceInput.value = val;
+                updateSimulator();
+            });
+            
+            slider.addEventListener('input', () => {
+                priceInput.value = parseFloat(slider.value).toLocaleString('fr-FR');
+                updateSimulator();
+            });
+            
+            updateSimulator();
+        }
+        
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            btn.addEventListener('click', () => {
+                if (menu.classList.contains('hidden')) {
+                    menu.style.display = 'block';
+                    menu.classList.remove('hidden');
+                    btn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                } else {
+                    menu.style.display = 'none';
+                    menu.classList.add('hidden');
+                    btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                }
+            });
+        }
+        
+        window.onload = function() {
+            tailwind.config = { content: [] };
+            setupSimulator();
+            setupMobileMenu();
+            console.log('%c✅ Site Immo en vente chargé – SEO optimisé, textes naturels, simulateur clair et honnête.', 'color:#0066FF; font-weight:600');
+        };
+    </script>
+</body>
+</html>
